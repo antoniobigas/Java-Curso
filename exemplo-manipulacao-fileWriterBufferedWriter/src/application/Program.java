@@ -10,8 +10,8 @@ public class Program {
         String[] lines = new String[] {"Good Morning", "Good Afternoon", "Good Night"};
 
         String path = "c:\\temp\\out.txt";
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+                                    /// o valor de true na linha abaixo é para nao sobrescrever oq ja havia sido feito
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
             for (String line : lines) {
                 bw.write(line);
                 bw.newLine();
